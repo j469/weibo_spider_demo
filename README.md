@@ -1,13 +1,6 @@
-﻿weibo spider python
-
-标签（空格分隔）： 未分类
-
----
-# Weibo_Spider with face detection
-
+﻿# Weibo spider with face detection
 
 ----------
-
 
 ## 1. Introduction
 This script can automaticlly download all the tweets and images from [Sina Weibo(chinese version of twitter&instagram)][1] of one user or a huge set of users. The searching and downloading process is done in multi-thread way, and it will report if a specific images is not available for downloading. After searching and downloading, there will be a face detection process( using API from service provider [Face++][2]) and put the pictures with faces into another folder, so you don't need the hassle to click next-picture next-picture to see how she/he really looks like. Imagine what you wanna do with this script! :)
@@ -33,7 +26,7 @@ After the promot, type the user_id (int):
 #### 2.1.2 Input file:
 You can generate a file with lots of user_ids, one per line. The script will read in the file, and search for all of them.
 
-    $ python weibo_spider.py <FILE, or relative path in LINUX way>
+    $ python weibo_spider.py <FILE, or relative path>
 
 ### 2.2 Typical Output
 #### 2.2.1 Screen shot of one example
@@ -54,7 +47,7 @@ You can generate a file with lots of user_ids, one per line. The script will rea
 This script will generate a folder in the same directory with the script, named after the user_id. In this folder, there's a 'text.txt' consists the plain text of all tweets, a 'image.txt' consists the urls of all images, and two sub folders 'images' and 'face_images' of original size images. 
 
 ### 2.3 Screenshot
-
+![Screen shot one][3]
 
 ----------
 
@@ -66,5 +59,10 @@ Since desktop version Weibo and their mobile apps have several anti-scraping mec
 Weibo has some pretty solid anti-scraping technics in their website and their APPs, including rate limiting, captcha tests(read text from a picture), blocking IP after too many requests. However, they don't have such many tools used in their 10+ years old WAP site, because of whatever reasons(I think no one still maintains that codes nowadays). As Cannikin Law, the chain is only as strong as the weakest link. Any company including Weibo should imporve all of their products to the same level of security, or shut down the services that too old to be updated.
 
 
+----------
+
+Last update: 2016/1/24
+
   [1]: https://en.wikipedia.org/wiki/Sina_Weibo
   [2]: http://www.faceplusplus.com/
+  [3]: https://github.com/j469/weibo_spider_demo/blob/master/screenshot_1.png
